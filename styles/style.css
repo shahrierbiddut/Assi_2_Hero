@@ -1,0 +1,840 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #200230;
+    /* TEMP background – you will replace later */
+    color: #ffffff;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #ff4ecd;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #d0cfff;
+    font-weight: 500;
+}
+
+.subscribe-btn {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #f7e93f 0%, #fb09b4 51%, #9100f8 100%);
+    color: hsl(0, 11%, 96%);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(184, 139, 171, 0.4);
+}
+
+.custom {
+    border: none;
+    height: 1px;
+    background-color: #ad178a;
+    border-radius: 5px;
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* BACKGROUND IMAGE */
+    background-image: url("../assets/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    padding-top: 40px;
+    z-index: 2;
+}
+
+
+/* HERO CIRCLE WRAP */
+
+.hero-circle-wrap {
+    justify-content: center;
+    position: relative;
+    width: 75%;
+    height: 75%;
+    margin: 0 auto 40px auto;
+}
+
+.hero-circle {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mic-on-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 82px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* MIC IMAGE */
+
+.mic-circle img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* TEXT */
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #c7c6ff;
+    margin-bottom: 30px;
+}
+
+
+/* BADGE */
+
+.badge {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background: #2cff9b;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+
+/* BUTTONS */
+
+.buttons button {
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.35s ease;
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #f7e93f 0%, #fb09b4 51%, #9100f8 100%);
+    border: none;
+    color: hsl(0, 17%, 95%);
+    margin-right: 10px;
+}
+
+.learn-btn {
+    background: transparent;
+    border: 2px solid #35b15e;
+    color: #1cd46f;
+}
+
+.buttons button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(255, 78, 205, 0.4);
+}
+
+
+/* BUTTON ICON IMAGE */
+
+.buttons button img {
+    width: 18px;
+    height: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 120px 20px 100px;
+    background: radial-gradient(circle at top, #1a0b3d, #0b0620 70%);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #c7c6ff;
+    margin-bottom: 16px;
+}
+
+
+/* DIVIDER LINE */
+
+.about-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 50px 0;
+}
+
+
+/* STATS */
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.stat h3 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2cff9b;
+    margin-bottom: 8px;
+}
+
+.stat span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #a7a6d8;
+}
+
+
+/* WHY TECHWAVE SECTION */
+
+.why-techwave {
+    padding: 120px 80px;
+    background: linear-gradient(180deg, #1a0b3d 0%, #0b0620 70%);
+}
+
+.why-techwave h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 70px;
+}
+
+
+/* GRID LAYOUT (MATCH IMAGE) */
+
+.features-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-template-areas: "tall mobile global" "tall resource resource" "wide wide wide";
+}
+
+
+/* grid areas */
+
+.tall {
+    grid-row: span 2;
+}
+
+.mobile {
+    grid-column: span 2;
+}
+
+.global {
+    grid-column: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+
+/* FEATURE CARD */
+
+.feature-card {
+    background: #1d0f3f;
+    border-radius: 26px;
+    padding: 32px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+}
+
+
+/* ICON IMAGE */
+
+.feature-icon {
+    width: 56px;
+    margin-bottom: 18px;
+}
+
+
+/* FONT AWESOME ICON */
+
+.fa-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f7e93f, #fb09b4, #9100f8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.fa-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.fa-icon i {
+    font-size: 24px;
+    color: #000;
+}
+
+
+/* TEXT */
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #c7c6ff;
+}
+
+.featured {
+    padding-bottom: 100px;
+    background: #0b0620;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.episode-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.episode-card {
+    background: #1d0f3f;
+    border-radius: 24px;
+    padding: 18px;
+    color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(184, 139, 171, 0.4);
+}
+
+.iframe-wrap {
+    width: 100%;
+    height: 180px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.iframe-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.episode-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.episode-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c7c6ff;
+    margin-bottom: 14px;
+}
+
+.duration {
+    font-size: 13px;
+    color: #2cff9b;
+}
+
+
+/* HOST SECTION */
+
+.host {
+    padding: 120px 80px;
+    background: linear-gradient(180deg, #12002b, #0b0620);
+    color: #fff;
+}
+
+.host h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.host-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #24104f;
+    border-radius: 32px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* Host Image */
+
+.host-img img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Content */
+
+.host-content h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.host-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c7c6ff;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 6px;
+    background: #3b1c7a;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: translateY(-4px);
+    background: #6b2cff;
+}
+
+
+/* FOOTER */
+
+.techwave-banner {
+    position: relative;
+    height: 300px;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+.footer-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.footer-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #5f5e5e, #c001a7, #ec1ab1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.icons img {
+    height: 22px;
+    opacity: 0.9;
+}
+
+.footer-text {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+
+/* RESPONSIVE Small Device */
+
+@media (max-width: 576px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .nav-links {
+        display: none;
+    }
+    /* HERO */
+    .hero-circle-wrap {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+    .mic-on-circle {
+        width: 60px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 14px;
+    }
+    .buttons {
+        display: flex;
+    }
+    .start-btn {
+        margin-right: 0;
+        width: 45%;
+        margin-left: auto;
+        margin-right: 45px;
+        margin-left: 25px;
+    }
+    .learn-btn {
+        width: 45%;
+        margin-left: auto;
+        margin-right: 45px;
+    }
+    .buttons button {
+        padding: 5px 5px;
+        font-size: 13px;
+        gap: 4px;
+    }
+    .buttons button img {
+        width: 16px;
+        height: 16px;
+    }
+    .badge {
+        top: 1px;
+        right: 1px;
+    }
+    /* ABOUT */
+    .about {
+        padding: 80px 16px;
+    }
+    .about h2 {
+        font-size: 28px;
+    }
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    /* WHY TECHWAVE */
+    .why-techwave {
+        padding: 80px 20px;
+    }
+    .why-techwave h2 {
+        font-size: 30px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    }
+    .tall,
+    .mobile,
+    .global,
+    .wide {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    /* FEATURED */
+    .featured h2 {
+        font-size: 30px;
+    }
+    .episode-grid {
+        grid-template-columns: 1fr;
+    }
+    /* HOST */
+    .host {
+        padding: 80px 20px;
+    }
+    .host h2 {
+        font-size: 30px;
+    }
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px;
+    }
+    .host-content p {
+        max-width: 100%;
+    }
+    .hero {
+        display: block;
+        background-size: contain;
+        background-position: center top;
+        min-height: auto;
+        padding-top: 90px;
+        padding-bottom: 60px;
+        background-position: center 170px;
+    }
+    .hero-content {
+        margin-top: 40px;
+        padding-top: 0px;
+    }
+    .navbar {
+        padding: 0 20px;
+    }
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #1a0b3d;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 20px;
+        z-index: 99;
+    }
+    .nav-links a {
+        font-size: 18px;
+    }
+    .subscribe-btn {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    /* menu show */
+    .nav-links.active {
+        display: flex;
+    }
+    .techwave-banner {
+        height: auto;
+        min-height: 260px;
+        padding: 40px 16px;
+        background-size: cover;
+        background-position: center;
+    }
+    .footer-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin: 18px 0;
+    }
+    .icon-item {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        font-size: 13px;
+        color: #cfcfcf;
+    }
+}
+
+
+/* RESPONSIVE Medium Device */
+
+@media (min-width: 576px) and (max-width: 992px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 0 40px;
+    }
+    /* HERO */
+    .hero-circle-wrap {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 30px;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    /* ABOUT */
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* WHY TECHWAVE */
+    .why-techwave {
+        padding: 100px 40px;
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: none;
+    }
+    .tall,
+    .mobile,
+    .global,
+    .wide {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    /* FEATURED */
+    .episode-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* HOST */
+    .host {
+        padding: 100px 40px;
+    }
+    .host-card {
+        gap: 30px;
+    }
+    .badge {
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+
+/* RESPONSIVE Large DEVICE */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+        padding: 0 60px;
+    }
+    .why-techwave {
+        padding: 100px 60px;
+    }
+    .host {
+        padding: 100px 60px;
+    }
+}
